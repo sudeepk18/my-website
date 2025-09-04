@@ -5,20 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Simple Static Webpage</title>
   <meta name="description" content="Example HTML5 page with headings, image, link, form, and semantic elements.">
-  <style>
-    /* Minimal, optional styles to make it look neat */
-    :root { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; color: #111; }
-    body { margin: 0; padding: 0; background: #fafafa; }
-    .container { max-width: 900px; margin: 1.5rem auto; padding: 1rem; }
-    header, footer { background: #f3f4f6; padding: 1rem; border-radius: 6px; }
-    nav ul { list-style: none; padding: 0; margin: 0; display:flex; gap: 0.75rem; }
-    nav a { text-decoration: none; color: #2563eb; }
-    .hero img { max-width: 100%; height: auto; border-radius: 6px; display:block; margin-top: 0.5rem; }
-    form { display: grid; gap: 0.5rem; max-width: 420px; margin-top: 0.5rem; }
-    input[type="text"], input[type="email"] { padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 4px; }
-    button { padding: 0.6rem 0.9rem; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
-    footer small { color: #6b7280; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="container" role="banner">
@@ -66,6 +53,19 @@
         <button type="submit">Send</button>
       </form>
     </section>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <p>Contact: <a href="mailto:hello@example.com">hello@example.com</a></p>
+    <small>© <span id="year"></span> My Simple Website</small>
+  </footer>
+
+  <script>
+    // small JS to set the year (optional)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
   </main>
 
   <footer class="container" role="contentinfo">
