@@ -1,11 +1,113 @@
-:root { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; color: #111; }
-body { margin: 0; padding: 0; background: #fafafa; }
-.container { max-width: 900px; margin: 1.5rem auto; padding: 1rem; }
-header, footer { background: #f3f4f6; padding: 1rem; border-radius: 6px; }
-nav ul { list-style: none; padding: 0; margin: 0; display:flex; gap: 0.75rem; }
-nav a { text-decoration: none; color: #2563eb; }
-.hero img { max-width: 100%; height: auto; border-radius: 6px; display:block; margin-top: 0.5rem; }
-form { display: grid; gap: 0.5rem; max-width: 420px; margin-top: 0.5rem; }
-input[type="text"], input[type="email"] { padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 4px; }
-button { padding: 0.6rem 0.9rem; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
-footer small { color: #6b7280; }
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Sections (cards) */
+section.card {
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Inputs and buttons */
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #357ABD;
+}
+
+/* Greeting and messages */
+#greeting, #timeGreeting, #secret {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* To-do list */
+#todoList {
+  list-style: none;
+  padding: 0;
+}
+
+#todoList li {
+  background: #f4f4f4;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Counter */
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.counter span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Color box */
+#colorBox {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  width: 100%;
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Interactive Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">🌟 Interactive Dashboard</h1>
+    <p>Play with different features below</p>
+  </header>
+
+  <!-- Greeting -->
+  <section class="card">
+    <h2>Greeting</h2>
+    <input id="nameInput" placeholder="Enter your name" />
+    <button id="greetBtn">Greet Me</button>
+    <p id="greeting" class="hidden"></p>
+  </section>
+
+  <!-- Time-based Greeting -->
+  <section class="card">
+    <h2>Time Greeting</h2>
+    <button id="timeBtn">Show Current Time Greeting</button>
+    <p id="timeGreeting"></p>
+  </section>
+
+  <!-- Background Color Changer -->
+  <section class="card">
+    <h2>Background Color</h2>
+    <button id="bgBtn">Change Background</button>
+    <div id="colorBox"></div>
+  </section>
+
+  <!-- To-Do List -->
+  <section class="card">
+    <h2>To-Do List</h2>
+    <input id="taskInput" placeholder="New task" />
+    <button id="addTaskBtn">Add Task</button>
+    <ul id="todoList"></ul>
+  </section>
+
+  <!-- Secret Toggle -->
+  <section class="card">
+    <h2>Secret Message</h2>
+    <button id="toggleBtn">Show/Hide Secret</button>
+    <p id="secret" class="hidden">🎉 This is the hidden secret message!</p>
+  </section>
+
+  <!-- Counter -->
+  <section class="card">
+    <h2>Counter</h2>
+    <div class="counter">
+      <button id="decreaseBtn">-</button>
+      <span id="counterValue">0</span>
+      <button id="increaseBtn">+</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

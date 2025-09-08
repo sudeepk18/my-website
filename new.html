@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 5: Styling with CSS</title>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --text-color: #333;
+      --font-main: 'Arial', sans-serif;
+    }
+    body { 
+      font-family: var(--font-main); 
+      margin: 0; 
+      padding: 0; 
+      color: var(--text-color); 
+      background: #f4f4f4; 
+    }
+    header { 
+      background: var(--primary-color); 
+      color: #fff; 
+      padding: 20px; 
+      text-align: center; 
+    }
+    nav { 
+      background: #222; 
+      display: flex; 
+      justify-content: center; 
+      gap: 15px; 
+      padding: 10px; 
+    }
+    nav a { 
+      color: white; 
+      text-decoration: none; 
+      padding: 5px 10px; 
+      border-radius: 5px; 
+      transition: background 0.3s; 
+    }
+    nav a:hover { 
+      background: var(--secondary-color); 
+    }
+    section { 
+      padding: 20px; 
+      background: white; 
+      margin: 10px auto; 
+      max-width: 1000px; 
+      border-radius: 10px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    }
+    .flex-demo { 
+      display: flex; 
+      justify-content: space-around; 
+      gap: 10px; 
+      margin: 20px 0; 
+    }
+    .flex-demo div { 
+      background: var(--primary-color); 
+      color: white; 
+      padding: 20px; 
+      border-radius: 5px; 
+      flex: 1; 
+      text-align: center; 
+    }
+    .grid-demo { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+      gap: 10px; 
+      margin: 20px 0; 
+    }
+    .grid-demo div { 
+      background: var(--secondary-color); 
+      color: white; 
+      padding: 20px; 
+      border-radius: 5px; 
+      text-align: center; 
+    }
+    .animate-box { 
+      width: 100px; 
+      height: 100px; 
+      background: var(--primary-color); 
+      margin: 20px auto; 
+      border-radius: 50%; 
+      position: relative; 
+      animation: move 3s infinite alternate ease-in-out; 
+    }
+    @keyframes move { 
+      from {transform: translateX(0);} 
+      to {transform: translateX(200px);} 
+    }
+    footer { 
+      text-align: center; 
+      padding: 15px; 
+      background: #222; 
+      color: white; 
+      margin-top: 20px; 
+    }
+    @media (max-width: 600px) { 
+      header h1 { font-size: 1.5rem; } 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 5: Styling with CSS</h1>
+    <p>A complete beginner-friendly guide</p>
+  </header>
+  <nav>
+    <a href="#colors">Colors</a>
+    <a href="#fonts">Fonts</a>
+    <a href="#box-model">Box Model</a>
+    <a href="#flexbox">Flexbox</a>
+    <a href="#grid">Grid</a>
+  </nav>
+
+  <section id="colors">
+    <h2>Colors</h2>
+    <p>CSS colors can be defined using HEX, RGB, HSL, or named values. Gradients allow smooth color transitions.</p>
+  </section>
+
+  <section id="fonts">
+    <h2>Fonts</h2>
+    <p>Use web-safe fonts or import Google Fonts. Control size, style, and spacing.</p>
+  </section>
+
+  <section id="box-model">
+    <h2>Box Model</h2>
+    <p>Every element has margin, border, padding, and content areas.</p>
+  </section>
+
+  <section id="flexbox">
+    <h2>Flexbox</h2>
+    <div class="flex-demo">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </section>
+
+  <section id="grid">
+    <h2>Grid</h2>
+    <div class="grid-demo">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Animation</h2>
+    <div class="animate-box"></div>
+  </section>
+
+  <footer>
+    <p>Module 5 Demo Webpage</p>
+  </footer>
+</body>
+</html>
