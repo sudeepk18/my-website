@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Module 7 — Form Handling & Validation</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width:640px; margin:24px auto; padding:0 12px; }
+    form { display:flex; flex-direction:column; gap:12px; }
+    .input-group { display:flex; flex-direction:column; }
+    label { font-weight:600; margin-bottom:4px; }
+    input { padding:8px 10px; font-size:16px; border:1px solid #ccc; border-radius:6px; }
+    input.error { border-color:#e74c3c; }
+    .error-message { color:#e74c3c; font-size:0.95rem; height:1.2em; }
+    .success-message { color:#1e7a1e; font-weight:700; margin-top:8px; }
+    button { padding:10px 14px; font-size:16px; border:none; border-radius:6px; background:#2b8aea; color:white; cursor:pointer; }
+    /* simple modal used later in advanced example */
+    .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); align-items:center; justify-content:center; }
+    .modal.show { display:flex; }
+    .modal .box { background:white; padding:20px; border-radius:8px; width:90%; max-width:420px; }
+  </style>
+</head>
+<body>
+  <h1>Sign up</h1>
+
+  <!-- novalidate disables browser's default validation so we handle it with JS -->
+  <form id="signupForm" novalidate>
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" />
+      <div class="error-message" id="usernameError" aria-live="polite"></div>
+    </div>
+
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+      <div class="error-message" id="emailError" aria-live="polite"></div>
+    </div>
+
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" />
+      <div class="error-message" id="passwordError" aria-live="polite"></div>
+    </div>
+
+    <button type="submit">Sign up</button>
+
+    <div class="success-message" id="formSuccess" aria-live="polite"></div>
+  </form>
+
+  <!-- Minimal modal for the advanced example (will be used later) -->
+  <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="box">
+      <h2 id="modalTitle">Success</h2>
+      <p id="modalMessage"></p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
+
